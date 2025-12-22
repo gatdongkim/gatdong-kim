@@ -1042,8 +1042,29 @@ a,a:hover
 {
     .header-content
     {
-        height: 640px;
+        /* Increased height slightly to ensure image fits with text */
+        height: auto; 
+        padding: 120px 0 80px; 
     }
+    
+    /* Ensure the image scales down and stays centered */
+    .home-img {
+        max-width: 280px;
+        margin-top: 50px;
+        z-index: 10;
+    }
+
+    /* Adjust the purple frame thickness and position for mobile */
+    .home-img::before {
+        border-width: 10px;
+        height: 85%;
+    }
+
+    .home-img::after {
+        height: 10px;
+        bottom: 30px;
+    }
+
     .navbar-toggler
     {
         background-color: var(--main-color);
