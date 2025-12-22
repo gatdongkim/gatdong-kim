@@ -1073,6 +1073,27 @@ a,a:hover
 }
 @media(max-width:767px)
 {
+    /* Fix for Buttons Overlapping on Mobile */
+    .home-text .btn-1, 
+    .home-text .btn-2 
+    {
+        display: block;        /* Stack buttons vertically */
+        width: 100%;           /* Full width for easier clicking */
+        margin: 10px 0;        /* Space between buttons */
+        text-align: center;
+        white-space: nowrap;   /* Keep "View Upwork Profile" on one line */
+        padding: 12px 15px;    /* Slightly tighter padding for mobile */
+        font-size: 15px;       /* Scale font down slightly to ensure it fits */
+    }
+
+    /* Fix for Logo size on Mobile */
+    .navbar-brand img 
+    {
+        max-width: 150px;      /* Prevents logo from hitting the menu button */
+        height: auto;
+    }
+
+    /* Your Existing Shape and Text Adjustments */
     .header-shape.shape-one img
     {
         width: 40px;
@@ -1148,7 +1169,6 @@ a,a:hover
     {
         margin-top: 20px;
     }
-
 
 }
 @media only screen and (min-width:992px) and (max-width:1200px)
